@@ -4,10 +4,10 @@ GCNs have been increasingly used for the classification of brain functional netw
 
 # Requirements
 
-python
-pytorch
-torch-scatter
-torch-sparse
-torch-cluster
-torch-geometric
-stellargraph
+* python
+* pytorch
+* torch-scatter
+* torch-sparse
+* torch-cluster
+* torch-geometric
+* stellargraph
