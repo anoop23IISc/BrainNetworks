@@ -11,3 +11,8 @@ GCNs have been increasingly used for the classification of brain functional netw
 * torch-cluster
 * torch-geometric
 * stellargraph
+
+Dataset
+
+* ADNI dataset is publicly avaiable at http://adni.loni.usc.edu/
+* ABIDE dataset is publicly available at http://preprocessed-connectomes-project.org/abide/
