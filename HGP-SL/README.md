@@ -1,24 +1,10 @@
 # HGP-SL
-Hierarchical Graph Pooling with Structure Learning (Preprint version is available on [arXiv](https://arxiv.org/abs/1911.05954)).
-
-![](https://github.com/cszhangzhen/HGP-SL/blob/master/fig/model.png)
+Hierarchical Graph Pooling with Structure Learning ([arXiv](https://arxiv.org/abs/1911.05954)).
 
 This is a PyTorch implementation of the HGP-SL algorithm, which learns a low-dimensional representation for the entire graph. Specifically, the graph pooling operation utilizes node features and graph structure information to perform down-sampling on graphs. Then, a structure learning layer is stacked on the pooling operation, which aims to learn a refined graph structure that can best preserve the essential topological information.
 
 
-## Requirements
-* python3.6
-* pytorch==1.5.0
-* torch-scatter==2.0.4
-* torch-sparse==0.6.4
-* torch-cluster==1.5.4
-* torch-geometric==1.5.0
-
-Note:
-This code repository is heavily built on [pytorch_geometric](https://github.com/rusty1s/pytorch_geometric), which is a Geometric Deep Learning Extension Library for PyTorch. Please refer [here](https://pytorch-geometric.readthedocs.io/en/latest/) for how to install and utilize the library.
-
-### Datasets
-Graph classification benchmarks are publicly available at [here](https://ls11-www.cs.tu-dortmund.de/staff/morris/graphkerneldatasets).
+### Data format
 
 This folder contains the following comma separated text files (replace DS by the name of the dataset):
 
@@ -61,32 +47,3 @@ There are OPTIONAL files if the respective information is available:
 **(8) DS_graph_attributes.txt (N lines)** 
 
 *regression values for all graphs in the dataset, the value in the i-th line is the attribute of the graph with graph_id i*
-
-
-### Run
-To run HGP-SL, just execute the following command for graph classification task:
-```
-python main.py
-```
-
-### Parameter Settings
-| Datasets      | lr        | weight_decay   | batch_size      | pool_ratio     | dropout  | net_layers |
-| ------------- | --------- | -------------- | -------- 	   | --------       | -------- | ---------- |
-| PROTEINS      | 0.001     | 0.001     	 | 512             | 0.5            | 0.0      | 3			| 
-| Mutagenicity  | 0.001     | 0.001          | 512             | 0.8            | 0.0      | 3			|
-| NCI109	    | 0.001     | 0.001          | 512             | 0.8            | 0.0      | 3			|
-| NCI1          | 0.001		| 0.001          | 512             | 0.8            | 0.0      | 3			|
-| DD            | 0.0001    | 0.001          | 64              | 0.3            | 0.5      | 2          |
-| ENZYMES       | 0.001     | 0.001          | 128             | 0.8            | 0.0      | 2          |
-
-
-## Citing
-If you find HGP-SL useful for your research, please consider citing the following paper:
-```
-@article{zhang2019hierarchical,
-  title={Hierarchical Graph Pooling with Structure Learning},
-  author={Zhang, Zhen and Bu, Jiajun and Ester, Martin and Zhang, Jianfeng and Yao, Chengwei and Yu, Zhi and Wang, Can},
-  journal={arXiv preprint arXiv:1911.05954},
-  year={2019}
-}
-``` 
