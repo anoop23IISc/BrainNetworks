@@ -12,6 +12,9 @@ GCNs have been increasingly used for the classification of brain functional netw
 * torch-geometric
 * stellargraph
 
+Note:
+This code repository is heavily built on [pytorch_geometric](https://github.com/rusty1s/pytorch_geometric), which is a Geometric Deep Learning Extension Library for PyTorch. Please refer [here](https://pytorch-geometric.readthedocs.io/en/latest/) for how to install and utilize the library.
+
 ### Dataset
 
 * ADNI dataset is publicly avaiable at http://adni.loni.usc.edu/
